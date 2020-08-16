@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>CDP - Crop Disease Prediction</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/normalize.css') }}">
+		<link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+      
+        
+    </head>
+
+    <body>
+        <!-- Start Home Section -->
+        <div id="home">
+
+            <!-- Navigation Bar -->
+            <nav class="navbar-custom">
+                <a class="logo-link">Predicto</a>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#aboutus">About Us</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#team">Our Team</a></li>
+                    <li><a href="#footer">Contact Us</a></li>
+                </ul>        
+            </nav>  <!-- End Navigation -->
+
+            <!-- Start Landing Page Section -->
+			<div class="landing">
+				<div class="home-wrap">
+					<div class="home-inner">
+							
+					</div>
+				</div>
+			</div>	
+				
+			<div class="caption text-center">
+				<h1>Welcome to PREDICTO</h1>
+				<h3>Crop Disease Prediction System</h3>
+				<a class="button bg-slider text-center" href="{{ url_for('inputs')}}">Get Started</a>
+			</div>  
+			
+			<!-- End Landing Page Section-->
+        </div>
+        <!-- End Home Section-->
+
+    <!--- Start About Us Section -->
+
+	<div id="aboutus" class="offset">
+		<div class="col-12 narrow text-center">
+				<h1>A brief introduction</h1>
+
+				<p>Agriculture is one of the main economic activities of India. It contributes  amply  to  the  gross national  income. Nowadays crops face many traits or diseases. 
+                Many crops are affected by the diseases due to environmental conditions. Hence crop disease prediction is an important task to the agricultural development in India. 
+                Internet of Things (IoT) network will help in real-time data collection. Machine learning algorithms give more precise predictions.
+                The diseases in crops can be predicted and intimated to the farmer so that huge losses can be prevented.</p>
+
+                <p>In recent years, there has been a large-scale infection area of crop diseases and insect pest, which caused heavy economic losses to the farmers. Crop production losses due to pests and diseases are quite substantial, particularly in the Indian semi-arid weather conditions.
+                We intend to use IoT and Machine Learning to acquire and analyse various data to predict the possibility of the diseases in crops. The idea is to train a machine to learn 
+                the pattern of temperature, soil composition, humidity, pest occurrence to identify the real-time data and classify them to predict the disease occurrence.</p>
+
+                <p>The objective is to identify a sequence of environmental conditions that takes place prior to a disease attack and learn the pattern to predict the disease with high accuracy. 
+                The diseases in crops can be predicted and intimated to the farmer so that huge losses can be prevented.
+                The proposed work can also be extended to act as a guide  for farmers  like,  which  fertilizer  can  be  used  to overcome the disease problem and which crop is beneficial to sow in a specific weather condition.</p>
+
+		</div>
+	</div>
+
+    <!-- End About Us Section -->
+    
+    <!--- Start Features Section -->
+
+	<div id="features" class="offset">
+		<!-- Start of Jumbotron -->
+		<div class="jumbotron">
+			<div class="narrow text-center">
+				<div class="col-12">
+					<h3 class="heading">Predictor Features</h3>
+					<div class="heading-underline"></div>
+				</div>
+
+				<div class="row text-center">
+					<div class="col-md-4">
+						<div class="features">
+							<i class="fa fa-thermometer-quarter fa-4x" data-fa-transform="shrink-3 up-5"></i>
+							<h3>Internet of Things</h3>
+							<p>It takes into consideration various environmental changes that lead to a crop disease. Real-time data is collected from sensors.</p> 
+
+						</div>
+					</div>
+
+					<div class="col-md-4">
+						<div class="features">
+							<i class="fa fa-cogs fa-4x" data-fa-transform="shrink-4.5 up-4.5"></i>
+							<h3>Machine Learning</h3>
+							<p>ML models are used to analyse the data and predict the possibilities of disease.</p> 
+						</div>
+					</div>
+			
+					<div class="col-md-4">
+						<div class="features">
+							<i class="fa fa-database fa-4x" data-fa-transform="shrink-4.5 up-4.5"></i>
+							<h3>Data-Centric</h3>
+							<p>Historic data is used to train the model effectively. A range of values is mined for a pattern to contribute to result.</p> 
+						</div>
+					</div>
+			
+					
+				</div><!-- End of row -->
+			</div><!-- End Narrow -->
+		</div><!-- End of Jumbotron -->		
+	</div>
+
+	<!-- End Features Section -->
+
+	<!--- Start Our Team Section -->
+
+	<div id="team" class="offset">
+
+		
+		<div class="team-bg text-center row">
+			<div class="col-12 text-center">
+				<h3 class="heading">Our Team</h3>
+				<div class="heading-underline"></div>
+			</div>
+
+		
+			<div class="col-12 team">
+					
+			<div class="row">
+				<div class="col-md-3">
+					<img src="{{ url_for('static', filename='css/img/team/sudhanshu.png')}}">
+					<hr class="team-hr">
+					<div class="text-center name">Sudhanshu Ranjan</div>
+					<div class="text-center usn">4SN16CS096</div>
+
+				</div>
+
+				<div class="col-md-3">
+					<img src="{{ url_for('static', filename='css/img/team/sharath.png')}}">
+					<hr class="team-hr">
+					<div class="text-center name">SharathKumar KR</div>
+					<div class="text-center usn">4SN16CS083</div>
+
+				</div>
+
+				<div class="col-md-3">
+					<img src="{{ url_for('static', filename='css/img/team/vikram.jpg')}}">
+					<hr class="team-hr">
+					<div class="text-center name">Vikram Kumar</div>
+					<div class="text-center usn">4SN16CS103</div>
+
+				</div>
+
+				<div class="col-md-3">
+					<img src="{{ url_for('static', filename='css/img/team/nirisha.jpeg')}}">
+					<hr class="team-hr">
+					<div class="text-center name">Nirisha</div>
+					<div class="text-center usn">4SN16CS062</div>
+
+				</div>
+
+				
+				</div> <!-- End Row-->
+			</div>
+			
+		</div>
+
+	</div>
+
+	<!-- End Clients Section -->
+
+    <!-- Footer background -->
+    <div class="footer-bg" id="footer">
+        <div class="footer text-center">
+		  
+			<div class="footer-contact-info">
+				<h2>Contact Us</h2>
+				<li>Srinivas Institute of Technology, Mangaluru</li>
+				<li>Mangaluru, DK</li>
+				<li>Karnataka, India</li>
+			</div> 
+			<a href=""><i class="fab fa-facebook-square"></i></a>
+			<a href=""><i class="fab fa-twitter-square"></i></a>
+			<a href=""><i class="fab fa-instagram"></i></a>
+
+			<span id="footer-credits">Made with &hearts;</span>
+            <span id="footer-copyrights">copyright &copy; 2020 &bullet; CDP - Crop Disease Prediction</span>
+
+			<div class="sitemap text-center">
+			<ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#aboutus">About Us</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#team">Our Team</a></li>
+				<li><a href="#footer">Contact Us</a></li>
+			</ul>
+			</div>
+		</div>
+	</div>
+
+	<!--- Script Source Files -->
+		<script src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"></script>
+	<!--- End of Script Source Files -->
+    </body>
+</html>

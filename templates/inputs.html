@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CDP - Crop Disease Prediction</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css')}}">
+    <!-- <link rel="stylesheet" href="bootstrap/css/bootstrap.css"> -->
+
+    <script>
+        function goBack() {
+            history.go(-1);
+        }
+        var data;
+    </script>
+</head>
+
+<body>
+
+    <div class="bg-box" id="bg-box">
+        <div id="close-btn"><a href="javascript: goBack();"><img
+                    src="{{ url_for('static', filename='css/img/icons/back 48x48.png')}}"></img></a></div>
+        <div class="form-class">
+            <span class="form-title">Crop Disease Prediction</span>
+            <form action="{{ url_for('predict')}}" method="POST">
+                <div id="form-id">
+                    <div class="form-input input-validate">
+                        <input class="input-class" name="inpTemperature" type="text"
+                            placeholder="Enter the Temperature (in Celsius)">
+                        <span class="focus-input-class"></span>
+                    </div>
+
+                    <div class="form-input input-validate">
+                        <input class="input-class" name="inpHumidity" type="text"
+                            placeholder="Enter the Humidity (in %)">
+                        <span class="focus-input-class"></span>
+                    </div>
+
+                    <div class="form-input input-validate">
+                        <input class="input-class" name="inpWind" type="text"
+                            placeholder="Enter the Wind Speed (in m/s)">
+                        <span class="focus-input-class"></span>
+                    </div>
+
+                    <div class="form-input input-validate">
+                        <input class="input-class" name="inpSoilMoisture" type="text"
+                            placeholder="Enter the Soil Moisture (in %)">
+                        <span class="focus-input-class"></span>
+                    </div>
+
+                    <div class="form-input input-validate">
+                        <input class="input-class" name="inpRainfall" type="text"
+                            placeholder="Enter the Rainfall (in cm)">
+                        <span class="focus-input-class"></span>
+                    </div>
+
+                    <div class="form-input input-validate">
+                        <input class="input-class" name="inpSunshine" type="text"
+                            placeholder="Enter the Sunshine (Avg.)">
+                        <span class="focus-input-class"></span>
+                    </div>
+
+                    <div class="container-form-btn">
+                        <button class="form-btn" value="submit"
+                            onclick="window.location.href='{{ url_for('result') }}';">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="control">
+            <a href="#popup" class="btn btn--white">Compute Data &rarr;</a>
+        </div>
+    </div>
+    
+    
+    <div class="popup" id="popup">
+        <div class="popup__content">
+            <a href="#bg-box" class="popup__close">&times;</a>
+            <a href="#" class="popup__resize">&larr;</a>
+            <ul class="list">
+                <li class="item">Temperature: <span class="value">{{ data['Temperature'] }}</span></li>
+                <li class="item">Humidity: <span class="value">{{ data['Humidity'] }}</span></li>
+                <li class="item">Wind Speed: <span class="value">{{ data['Wind Speed'] }}</span></li>
+                <li class="item">Soil Moisture: <span class="value">{{ data['Soil Moisture'] }}</span></li>
+                <li class="item">Soil Temperature: <span class="value">{{ data['Soil Temperature'] }}</span></li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+
+</html>

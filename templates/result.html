@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CDP - Crop Disease Prediction</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css')}}">
+</head>
+<script>
+
+    function myFunc() {
+        
+        /* JS Variables and Functions*/
+
+        pred_text="NA"
+        var result = parseInt("{{ prediction_val }}");
+
+        if (result <= 4){
+            pred_text = "No";
+        }
+        else if(result <=7){
+            pred_text = "Yes";
+        }
+        else if(result<=10){
+            pred_text="Highly Yes";
+        }
+        else{
+            pred_text = "Invalid";
+        }
+        
+        document.getElementById('pred-value').innerHTML=result;
+        document.getElementById('pred-result').innerHTML=pred_text;
+    } 
+    
+    function goBack(){
+        history.go(-1);
+    }
+
+</script>
+<body onload="myFunc()">
+    <div class="bg-box">
+        <div id="close-btn"><a href="javascript: goBack();"><img src="{{ url_for('static', filename='css/img/icons/back 48x48.png')}}"></img></a></div>
+        <div class="form-class">
+            <span class="form-title">Crop Disease Prediction</span>
+            <!-- Display Result -->
+            <div class="container-result" id="res-box">
+                <div id="result">
+                    <span class="lbl">Prediction Score</span>
+                    <div id="pred-value"></div>
+                    <span class="lbl">Prediction</span>
+                    <div id="pred-result"></div>
+                </div>
+            </div>    
+            <!-- Result End -->
+        </div>
+        
+    </div>
+
+</body>
