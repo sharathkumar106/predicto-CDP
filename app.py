@@ -1,6 +1,6 @@
 # Dependencies
 from flask import Flask, request, jsonify, render_template, make_response
-from sklearn.externals import joblib
+import joblib
 import traceback
 import pandas as pd
 import numpy as np
