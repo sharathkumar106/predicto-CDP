@@ -75,6 +75,10 @@ def result():
 
 @app.route('/predict', methods=['POST'])
 def predict():
+    rfc = joblib.load("model.pkl") # Load "model.pkl"
+    print ('Model loaded')
+    model_columns = joblib.load("model_columns.pkl") # Load "model_columns.pkl"
+    print ('Model columns loaded')
     if rfc:
         try:
             features = [float(x) for x in request.form.values()]
@@ -97,9 +101,4 @@ def predict():
 
 if __name__ == '__main__':
     port = 12345 # The port will be set to 12345
-    rfc = joblib.load("model.pkl") # Load "model.pkl"
-    print ('Model loaded')
-    model_columns = joblib.load("model_columns.pkl") # Load "model_columns.pkl"
-    print ('Model columns loaded')
-
     app.run(port=port)
