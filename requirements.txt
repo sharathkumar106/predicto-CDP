@@ -51,8 +51,6 @@ PySocks==1.7.1
 pytemperature==1.0
 python-dateutil==2.8.1
 pytz==2020.1
-pywin32
-pywinpty
 pyzmq==19.0.1
 requests
 scikit-learn==0.23.2
