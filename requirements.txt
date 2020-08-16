@@ -52,10 +52,10 @@ pyrsistent==0.16.0
 PySocks==1.7.1
 pytemperature==1.0
 python-dateutil==2.8.1
-pytz==2020.1
-pywin32==227
-pywinpty==0.5.7
-pyzmq==19.0.1
+pytz
+pywin32
+pywinpty
+pyzmq
 requests
 scikit-learn==0.23.2
 scipy==1.5.2
