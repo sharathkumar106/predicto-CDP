@@ -11,13 +11,13 @@
         
         /* JS Variables and Functions*/
 
-        pred_text="NA"
+        pred_text="NA";
         var result = parseInt("{{ prediction_val }}");
 
-        if (result <= 4){
+        if (result < 4){
             pred_text = "No";
         }
-        else if(result <=7){
+        else if(result <6){
             pred_text = "Yes";
         }
         else if(result<=10){

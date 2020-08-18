@@ -82,20 +82,20 @@ def predict():
     if rfc:
         try:
             features = [float(x) for x in request.form.values()]
-            final_features = [np.array(features)]
-            print(final_features)
+            final_features = [np.array(features)] #[23,89,7,86,245,.9]
+            #print(final_features) 
 
-            prediction = rfc.predict(final_features)
+            prediction = rfc.predict(final_features) #[7]
 
-            output = prediction[0]
-            print(request.form.values())
+            output = prediction[0] #7
+            #print(request.form.values())
             return render_template('result.html',prediction_val='{}'.format(output))
 
         except:
-            print(request.form.values())
+            #print(request.form.values())
             return jsonify({'trace': traceback.format_exc()})
     else:
-        print ('Train the model first')
+        #print ('Train the model first')
         return ('No model here to use')
 
 
